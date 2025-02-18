@@ -43,13 +43,17 @@
     </div>
   </div>
 </nav>
+<script>function pindahHalaman(){
+        window.location.href = "tambah.php";
+    }
+   </script>
 
     <div class="container">
     <H1 style="color: coral;"> DataStock </H1>
   <table class="table table-bordered">
     <tr>
-        <th style="color: crimson;">id_jenis</th>
         <th style="color: crimson;">nama_jenis</th>
+        <th style="color: crimson;">id_jenis</th>
         <th style="color: darkgreen;">edit</th>
     </tr>
     <?php
@@ -63,8 +67,9 @@
             <td><?php echo $result['nama_jenis']?></td>
            
             <td>
-            <a class="btn btn-outline-success" href="">edit</a>
-            <a class="btn btn-outline-danger" href="">Hapus</a>
+            <a class="btn btn-outline-success" href="edit.php?id_jenis=<?php echo $result['id_jenis']; ?>"><i class="fa-solid fa-pen-to-square"></i>edit</a>
+                
+
             </td>
             </tr>
             <?php
@@ -74,7 +79,7 @@
        }
        ?>
   </table>
-  
+  <button class="btn btn-outline-dark" onclick="pindahHalaman()">Tambah data</button>
   </div>
 </body>
 </html>

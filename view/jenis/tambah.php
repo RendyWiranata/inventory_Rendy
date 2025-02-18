@@ -5,50 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data Barang</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            background-color: #f4f7fc;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            font-family: 'Poppins', sans-serif;
             color: #333;
         }
         .container {
-            max-width: 600px;
-            margin-top: 50px;
+            max-width: 650px;
+            margin-top: 60px;
         }
         .form-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
         h1 {
             text-align: center;
-            color: #333;
-            margin-bottom: 30px;
+            color: #444;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 35px;
         }
         label {
-            font-weight: bold;
+            font-weight: 600;
         }
         .form-control {
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: box-shadow 0.3s;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
         }
         button {
             width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 4px;
-            background-color: #007bff;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
             color: white;
             border: none;
-            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
         }
         button:hover {
-            background-color: #0056b3;
+            background: linear-gradient(90deg, #764ba2, #667eea);
+            transform: translateY(-3px);
         }
         .mb-3 {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
     </style>
 </head>
@@ -56,21 +62,21 @@
 
     <div class="container">
         <div class="form-container">
-            <h1>Tambah Data Barang</h1>
+            <h1><i class="fas fa-box-open"></i> Tambah Data Barang</h1>
             <form action="simpan.php" method="POST">
                 <div class="mb-3">
-                    <label for="id_barang" class="form-label">ID jenis</label>
+                    <label for="id_jenis" class="form-label">ID Jenis</label>
                     <input type="number" class="form-control" name="id_jenis" id="id_jenis" required>
                 </div>
                 <div class="mb-3">
-                    <label for="stock" class="form-label">Nama jenis</label>
-                    <input type="number" class="form-control" name="nama_jenis" id="nama_jenis" required>
+                    <label for="nama_jenis" class="form-label">Nama Jenis</label>
+                    <input type="text" class="form-control" name="nama_jenis" id="nama_jenis" required>
                 </div>
-                
-                <button type="submit">Simpan</button>
+                <button type="submit"><i class="fas fa-save"></i> Simpan</button>
             </form>
         </div>
     </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
